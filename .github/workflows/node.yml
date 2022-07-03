@@ -16,3 +16,7 @@ jobs:
         ps -ef | grep top
     - run: |
         pidof top
+    - run: |
+        kill -9 $(pidof top)
+    - run: |
+        ps -ef | grep top 
