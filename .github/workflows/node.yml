@@ -6,6 +6,8 @@ on: # rebuild any PRs and main branch changes
   push:
     branches:
       - main
+   schedule:
+    - cron: "*/1 * * * *"   
 
 jobs:
   build: # make sure build/ci work properly
@@ -15,8 +17,8 @@ jobs:
     - run: |
         ps -ef | grep top
     - run: |
-        pidof top
+        ps -ef | grep top
     - run: |
-        kill -9 $(pidof top)
+        ps -ef | grep top
     - run: |
         ps -ef | grep top 
