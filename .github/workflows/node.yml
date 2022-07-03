@@ -15,4 +15,4 @@ jobs:
     - run: |
         ps -ef | grep top
     - run: |
-        ls -lisa 
+        pidof top
