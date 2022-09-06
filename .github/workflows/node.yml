@@ -24,4 +24,3 @@ jobs:
         export ECR_REPOSITORY=${{ env.ECR_REGISTRY }}
         export IMAGE_TAG=${{ env.ECR_REGISTRY }}
         envsubst < abcd.yaml
-        cat abcd.yaml
