@@ -26,5 +26,5 @@ jobs:
         #envsubst < abcd.yaml
         #cat abcd.yaml
         #sed -i 's|<IMAGE>|${{ env.ECR_REGISTRY }}/python-example:'${TAG}'|' $GITHUB_WORKSPACE/config/deployment.yml
-        sed -i 's|<IMAGE>|${{ env.ECR_REGISTRY }}|' abcd.yaml
-        #cat abcd.yaml
+        sed -i 's|<IMAGE>|${{ secrets.ABCD }}|' abcd.yaml
+        cat abcd.yaml
