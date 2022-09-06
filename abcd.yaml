@@ -1,4 +1,4 @@
 images:
 - name: amazonaws.com/kubernetes-github-actions
-  newName: ${ECR_REPOSITORY}
+  newName: <IMAGE>
   newTag: ${IMAGE_TAG}
