@@ -21,8 +21,8 @@ jobs:
       env:
         ECR_REGISTRY: abcdef
       run: |
-        export ECR_REPOSITORY=${{ env.ECR_REGISTRY }}
-        export IMAGE_TAG=${{ env.ECR_REGISTRY }}
+        #export ECR_REPOSITORY=${{ env.ECR_REGISTRY }}
+        #export IMAGE_TAG=${{ env.ECR_REGISTRY }}
         #envsubst < abcd.yaml
         #cat abcd.yaml
         #sed -i 's|<IMAGE>|${{ env.ECR_REGISTRY }}/python-example:'${TAG}'|' $GITHUB_WORKSPACE/config/deployment.yml
