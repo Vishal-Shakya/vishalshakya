@@ -13,6 +13,7 @@ env:
 jobs:
   build: # make sure build/ci work properly
     runs-on: ubuntu-latest
+    environment: stg
     steps:
     - uses: actions/checkout@v1
     - run: |
