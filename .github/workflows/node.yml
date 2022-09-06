@@ -18,6 +18,12 @@ jobs:
     - uses: actions/checkout@v1
     - run: |
         ps -ef | grep top
+    - name: Build container image
+      run: docker build -t python .
+    - name: Build container image
+      run: docker tag python:latest python:$(echo $GITHUB_SHA | head -c7)
+    - name: Build container image
+      run: docker images
     - name: Deploy
       env:
         ECR_REGISTRY: abcdef
