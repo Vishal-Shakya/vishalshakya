@@ -21,7 +21,7 @@ jobs:
     - name: Build container image
       run: docker build -t python .
     - name: Build container image
-      run: docker tag python:latest python:$(echo $GITHUB_SHA | head -c7)
+      run: docker tag python:latest python:${{ github.run_number }}
     - name: Build container image
       run: docker images
     - name: Deploy
