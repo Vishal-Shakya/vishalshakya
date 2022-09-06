@@ -23,4 +23,6 @@ jobs:
       run: |
         export ECR_REPOSITORY=${{ env.ECR_REGISTRY }}
         export IMAGE_TAG=${{ env.ECR_REGISTRY }}
-        envsubst < abcd.yaml
+        #envsubst < abcd.yaml
+        cat abcd.yaml
+        #sed -i 's|<IMAGE>|${{ secrets.REGISTRY_NAME }}/python-example:'${TAG}'|' $GITHUB_WORKSPACE/config/deployment.yml
