@@ -35,3 +35,6 @@ jobs:
         #sed -i 's|<IMAGE>|${{ env.ECR_REGISTRY }}/python-example:'${TAG}'|' $GITHUB_WORKSPACE/config/deployment.yml
         sed -i 's|<IMAGE>|${{ secrets.ABCD }}|' abcd.yaml
         cat abcd.yaml
+        #helm upgrade --install --atomic --timeout 1m rest infra/helm/ -f infra/helm/values.yaml \
+		#--kube-context nonprod --namespace develop --create-namespace \
+		#--set image.tag=${TAG}
